@@ -1,0 +1,69 @@
+<!-- @format -->
+<html>
+  <head>
+    <title>CRDT Prototype</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="client.js"></script>
+    <style>
+      input[type='text'],
+      input[type='number'] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h3>State</h3>
+        <p id="state-display"></p>
+      </div>
+      <div>
+        <h3>Edit</h3>
+        <div class="row">
+          <div class="three columns">
+            <h4>Insert</h4>
+            <label for="insert-text">Text:</label>
+            <input type="text" id="insert-text" name="insert-text" />
+            <label for="insert-pos">Position:</label>
+            <input type="number" id="insert-pos" name="insert-pos" value="0" />
+            <input
+              id="insert-btn"
+              class="button-primary"
+              type="submit"
+              value="Insert"
+            />
+          </div>
+          <div class="three columns">
+            <h4>Delete</h4>
+            <label for="delete-pos">Position:</label>
+            <input type="number" id="delete-pos" name="delete-pos" value="0" />
+            <input
+              id="delete-btn"
+              class="button-primary"
+              type="submit"
+              value="Delete"
+            />
+          </div>
+          <div class="three columns">
+            <h4>Latency</h4>
+            <input
+              type="range"
+              min="0"
+              max="3000"
+              value="300"
+              id="latency-slider"
+            />
+            <span><span id="time-value">300</span> ms</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="three columns"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

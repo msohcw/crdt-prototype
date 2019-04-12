@@ -1,0 +1,11 @@
+{
+  "name": "crdt-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "dev": "webpack --mode development ./src/client.js --output client.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
